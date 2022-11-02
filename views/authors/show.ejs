@@ -23,6 +23,18 @@
         </ul>
       </section>
       <section>
+        <h2>Articles Written By This Author:</h2>
+        <ul>
+          <% for(let i = 0; i < author.articles.length; i++) { %>
+          <li>
+            <a href="/articles/<%= author.articles[i]._id %>"
+              ><%= author.articles[i].title %></a
+            >
+          </li>
+          <% } %>
+        </ul>
+      </section>
+      <section>
         <form action="/authors/<%= author._id %>?_method=DELETE" method="POST">
           <input type="submit" value="Delete Author" />
         </form>

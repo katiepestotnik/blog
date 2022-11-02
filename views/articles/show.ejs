@@ -16,6 +16,8 @@
       </nav>
     </header>
     <main>
+      <h1><%=article.title%></h1>
+      <small>by: <a href="/authors/<%= author._id %>"><%= author.name %></a></small>
       <section><%= article.body %></section>
       <section>
         <form action="/articles/<%=article._id%>?_method=DELETE" method="POST">

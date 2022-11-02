@@ -17,6 +17,11 @@
     </header>
     <main>
       <form action="/articles" method="POST">
+        <select class="browser-default" name="authorId">
+          <% for(let i = 0; i < authors.length; i++) { %>
+          <option value="<%= authors[i]._id %>"><%= authors[i].name %></option>
+          <% } %>
+        </select><br><br><br>
         <label for="title">Title:</label>
         <input type="text" name="title" /><br />
         <label for="body">Body:</label>
